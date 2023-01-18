@@ -1,18 +1,6 @@
 .root{
-    background-color: darkslategray;}
-
-#Main-Name-Header{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flexbox;
-    height: 75px;
-    text-align: left;
-    background-color:thistle;
-    padding-left: 35px;
-    padding-top: 35px;
-    border: 15px;
-    border-color: darkcyan;
-    border-radius: 15px;
-
+    background-color: rgba(0, 255, 191, 0.783);
+    text-align: center;
 }
 
 .heading{
@@ -20,7 +8,7 @@
     text-align: center;
 }
 
-a:hover{
+.timer-button-section.a:hover{
     box-shadow: 15px 0px 100px 0px rgb(59, 244, 173);
     transition: .3s ease;
     }
@@ -43,10 +31,30 @@ a:hover{
     .about-me-paragraph {
     display: flexbox;
     flex-direction: column;
-    
-    
     }
-    .root{
-        text-align: center;
-    }    
+
+}
+
+.timer-button-section{
+    flex: auto;
+    border: 15px;
+    border-color: slategray;
+    background-color:burlywood;
+    border-radius: 35px;
+    line-height: 50px;
+    margin: 30px 30px 30px 30px;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+#start-timer-button{
+    color: gray;
+    border-radius: 15px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#start-timer-button:hover{
+    box-shadow: 5px 5px rgba(0,0,0,0.24), 10px 10px rgba(0,0,0,0.19);
+    transition-duration: 1s;
 }
