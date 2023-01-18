@@ -1,0 +1,52 @@
+.root{
+    background-color: darkslategray;}
+
+#Main-Name-Header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flexbox;
+    height: 75px;
+    text-align: left;
+    background-color:thistle;
+    padding-left: 35px;
+    padding-top: 35px;
+    border: 15px;
+    border-color: darkcyan;
+    border-radius: 15px;
+
+}
+
+.heading{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+a:hover{
+    box-shadow: 15px 0px 100px 0px rgb(59, 244, 173);
+    transition: .3s ease;
+    }
+
+
+.footer{
+    background-color: thistle;
+    display: block;
+    border: 10px;
+    border-color: ghostwhite;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    
+}
+
+
+@media screen and (max-width: 760px) {
+    .about-me-paragraph {
+    display: flexbox;
+    flex-direction: column;
+    
+    
+    }
+    .root{
+        text-align: center;
+    }    
+}
