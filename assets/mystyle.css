@@ -3,6 +3,14 @@
     text-align: center;
 }
 
+@media screen and (max-width: 760px) {
+    .about-me-paragraph {
+    display: flexbox;
+    flex-direction: column;
+    }
+
+}
+
 .heading{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
@@ -24,15 +32,6 @@
     margin: 10px;
     text-align: center;
     
-}
-
-
-@media screen and (max-width: 760px) {
-    .about-me-paragraph {
-    display: flexbox;
-    flex-direction: column;
-    }
-
 }
 
 .timer-button-section{
@@ -57,4 +56,34 @@
 #start-timer-button:hover{
     box-shadow: 5px 5px rgba(0,0,0,0.24), 10px 10px rgba(0,0,0,0.19);
     transition-duration: 1s;
+}
+
+.question-section-parent{
+    display:flexbox;
+    background-color: antiquewhite;
+    height: 200px;
+    width: auto;
+    border: 15px;
+    border-color: black;
+    margin: 15px;
+    padding-bottom: 15px;
+}
+
+#question-section{
+    background-color: black;
+    border: 15px;
+    border-radius: 15px;
+}
+
+.question-box{
+    display: flexbox;
+    background-color: whitesmoke;
+    border-radius: 25px;
+    margin: 25px;
+    padding: 25px;
+    padding-top: 100px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    border: 15px solid black;
 }

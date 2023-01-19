@@ -1,23 +1,27 @@
-var timer = document.getElementById(count-down-number);
+var timerEL = document.getElementById("count-down-number") ;
+var startTimerbutton = document.getElementById("start-timer-button")
 
+startTimerbutton.addEventListener("click", buttonClick)
+timerEL.addEventListener("click", countdown)
 
-function countdown()
-var timeRemaining = 30;
+function buttonClick(){
+    console.log("buttonClick")
+    countdown()
+}
 
-
+function countdown(){
+var timeRemaining = 60;
 var countingTime = setInterval(function (){
     if (timeRemaining > 1){
-    timer.textContent = timeRemaining + 'Seconds left';
+    timerEL.textContent = timeRemaining + 'Seconds left';
     timeRemaining--;
     } else if(timeRemaining === 1){
-        timer.textContent = timeRemaining + 'Second left';
+        timerEL.textContent = timeRemaining + 'Second left';
         timeRemaining--;
     } else {
-        timer.textContent = '';
+        timerEL.textContent = '';
         clearInterval(countingTime);
-        
+        return
     }
-    
 },1000)
-
-function showTime(){}
+}
