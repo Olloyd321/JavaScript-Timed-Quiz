@@ -13,10 +13,10 @@ function countdown(){
 var timeRemaining = 60;
 var countingTime = setInterval(function (){
     if (timeRemaining > 1){
-    timerEL.textContent = timeRemaining + 'Seconds left';
+    timerEL.textContent = timeRemaining + ' Seconds left';
     timeRemaining--;
     } else if(timeRemaining === 1){
-        timerEL.textContent = timeRemaining + 'Second left';
+        timerEL.textContent = timeRemaining + ' Second left';
         timeRemaining--;
     } else {
         timerEL.textContent = '';

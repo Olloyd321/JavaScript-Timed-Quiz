@@ -1,5 +1,11 @@
-.root{
+.root.div{
     background-color: rgba(0, 255, 191, 0.783);
+    text-align: center;
+    height: auto;
+}
+
+.root{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
@@ -12,7 +18,7 @@
 }
 
 .heading{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
     text-align: center;
 }
 
@@ -23,6 +29,7 @@
 
 
 .footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: thistle;
     display: block;
     border: 10px;
@@ -37,6 +44,7 @@
 .timer-button-section{
     flex: auto;
     border: 15px;
+    border-style: dashed;
     border-color: slategray;
     background-color:burlywood;
     border-radius: 35px;
@@ -58,32 +66,32 @@
     transition-duration: 1s;
 }
 
+
 .question-section-parent{
     display:flexbox;
     background-color: antiquewhite;
-    height: 200px;
+    height: 125px;
     width: auto;
     border: 15px;
     border-color: black;
+    border-radius: 35px;
     margin: 15px;
     padding-bottom: 15px;
 }
 
-#question-section{
-    background-color: black;
-    border: 15px;
-    border-radius: 15px;
+.question-box.section{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 122, 122);
+    display: flexbox;
+    height: 50px;
+    background-color: whitesmoke;
+    border: 2px;
+    border-style: dashed;
+    border-radius: 35px;
+    border-color: black;
 }
 
-.question-box{
-    display: flexbox;
-    background-color: whitesmoke;
-    border-radius: 25px;
-    margin: 25px;
-    padding: 25px;
-    padding-top: 100px;
-    width: auto;
-    height: auto;
-    text-align: center;
-    border: 15px solid black;
+.answer-box{
+    flex:auto;
+
 }
