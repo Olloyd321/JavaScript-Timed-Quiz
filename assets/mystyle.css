@@ -70,7 +70,7 @@
 .question-section-parent{
     display:flexbox;
     background-color: antiquewhite;
-    height: 125px;
+    height: 250px;
     width: auto;
     border: 15px;
     border-color: black;
@@ -83,7 +83,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(0, 122, 122);
     display: flexbox;
-    height: 50px;
+    height: 500px;
     background-color: whitesmoke;
     border: 2px;
     border-style: dashed;
@@ -91,7 +91,7 @@
     border-color: black;
 }
 
-.answer-box{
-    flex:auto;
-
+#answerboxes{
+    display:flex;
+    flex-direction: column;
 }
