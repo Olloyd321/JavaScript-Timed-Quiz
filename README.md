@@ -3,7 +3,7 @@ This repo is for week 3 challenge for the timed javascript quiz.
 
 The purpose of this challenge is to demonstrate my understanding of javascript.
 
-The most challenging aspect of this project was how to approach a question/answer box for the quiz
+The most challenging aspects of this project was how to approach a question/answer box for the quiz, after figuring that out with office hours and a tutor session, the next most challenging part of the project was saving to local storage for the highscores. 
 
 ## Acceptance Criteria
 

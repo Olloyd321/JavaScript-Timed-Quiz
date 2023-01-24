@@ -10,7 +10,9 @@ var questionIndex = 0;
 var quizInProgress = false;
 var timeRemaining = 60;
 var gameOver = false;
-var rightOrWrong = document.getElementById("wrong/right")
+var rightOrWrong = document.getElementById("wrong/right");
+var currentScore = 0;
+var storedHighScores = currentScore;
 
 var afterButtonclickFormat = document.getElementById('clickHeader');
 
@@ -67,6 +69,7 @@ function displayAnswers(){
 function displayHighScores(){
     if (gameOver===true){
         // TO DO: load highscores from local storage and display.
+        var storedHighScores = JSON.parse(localStorage.getItem(currentScore))
     }
 }
 
@@ -74,8 +77,9 @@ function clickFormat(){
     afterButtonclickFormat.textContent=""
 }
 
-function displayRightOrWrong(){
-    rightOrWrong.textContent="Wrong, try again! 10 seconds taken off the clock!"
+function displayRightOrWrong(message){
+    rightOrWrong.textContent=message;
+
 }
 
 function buttonClick(){
@@ -92,25 +96,42 @@ function checkResponse(event){
     {
     var correctAnswerText = questionsWithAnswers[questionIndex].correct;
     if (correctAnswerText===event.target.textContent){
-        displayRightOrWrong=""
         if (questionIndex === 3){
-            quizInProgress=false
-            gameOver=true
-            //TO DO: Save highscore to local storage.
-            displayHighScores()
+            quizInProgress=false;
+            gameOver=true;
+            var scores = localStorage.getItem("highScores");
+            if (scores){ 
+                scores.push(currentScore);   
+                localStorage.setItem("highScores", JSON.stringify(scores));        
+            }
+            else {
+                localStorage.setItem("highScores", JSON.stringify([currentScore]));
+            }
+            displayHighScores();
+            displayRightOrWrong("Game over!");
+            // console.log(scores);
         }
         else{
         questionIndex++;
+        currentScore++;
         displayQuestion();
         displayAnswers();
+        displayRightOrWrong("Correct!");
+        displayHighScores();
         }
     }
         else {
-            timeRemaining-=10
-            displayRightOrWrong()
+            timeRemaining-=10;
+            currentScore--;
+            displayRightOrWrong("Wrong, try again! -1 point and 10 seconds taken off the clock!");
             }
+       
     }
 
+    if (gameOver){
+        quizInProgress=false
+        displayRightOrWrong("GAME OVER!");
+    } 
 }
 
 // this function is the countdown timer
