@@ -24,5 +24,5 @@ THEN I can save my initials and my score
 # Links
 Please find the link to the project repository [here](https://github.com/Olloyd321/JavaScript-Timed-Quiz)
 
-Please find the link to the deployed project [here]()
+Please find the link to the deployed project [here](https://olloyd321.github.io/JavaScript-Timed-Quiz/)
 
