@@ -109,6 +109,7 @@ function checkResponse(event){
             }
             displayHighScores();
             displayRightOrWrong("Game over!");
+            localStorage.getItem(scores)
             // console.log(scores);
         }
         else{
